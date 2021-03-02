@@ -43,4 +43,30 @@ class Musica
   {
     return $this->album;
   }
+
+  //método
+  function consultamusica()
+  {
+    
+    return ;
+  }
+  function adicionarmusica()
+  {
+    
+    return ;
+  }
+
+  function excluirmusica()
+  {
+    
+    return ;
+  }
+  function repetido($nome, $cantor)
+  {
+    if ($this->nome == $nome and $this->cantor == $cantor){
+      return " essa musica ja foi adcionada";
+    }
+    
+    return "adcionado com sucesso";
+  }
 }
