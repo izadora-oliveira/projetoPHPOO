@@ -49,4 +49,22 @@ class Filmes
     
     return ;
   }
+  function adicionarfilme()
+  {
+    
+    return ;
+  }
+  function excluirfilme()
+  {
+    
+    return ;
+  }
+  function repetido($nome, $lancamento)
+  {
+    if ($this->nome == $nome and $this->lancamento == $lancamento){
+      return " esse filme ja foi adcionado";
+    }
+    
+    return "adcionado com sucesso";
+  }
 }
