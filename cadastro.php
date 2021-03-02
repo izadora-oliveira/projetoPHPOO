@@ -42,4 +42,14 @@ class Cadastro
   {
     return $this->senha;
   }
+
+  //métodos
+  function emailrepetido($email)
+  {
+    if ($this->email == $email){
+      return "email ja existente no cadastro";
+    }
+    
+    return "cadastro realizado com sucesso";
+  }
 }
