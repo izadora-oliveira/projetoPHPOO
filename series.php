@@ -43,4 +43,31 @@ class Series
   {
     return $this->lancamento;
   }
+
+  //método
+  function consultaserie($nome)
+  {
+    
+    return ;
+  }
+  function adicionarserie()
+  {
+    
+    return ;
+  }
+
+  function excluirserie()
+  {
+    
+    return ;
+  }
+  function repetido($nome)
+  {
+    if ($this->nome == $nome){
+      return " essa serie ja foi adcionada";
+    }
+    
+    return "adcionada com sucesso";
+  }
+
 }
