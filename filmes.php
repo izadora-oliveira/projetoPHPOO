@@ -42,4 +42,11 @@ class Filmes
   {
     return $this->genero;
   }
+
+  //método
+  function consultafilme()
+  {
+    
+    return ;
+  }
 }
