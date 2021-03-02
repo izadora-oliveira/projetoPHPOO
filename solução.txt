@@ -1,0 +1,5 @@
+Programa Biblioteca Diversa Individual.  
+
+Quero um programa pra organizar filmes e series que já vi, adicionar informações de músicas preferidas e livros que já li tudo em um só lugar, (só dados do arquivo, não o arquivo em si) como uma biblioteca pessoal e digital, com sistema de usuário para várias pessoas usarem com seus perfis, tendo sua própria biblioteca individual. 
+
+Para atender a necessidade de organização do cliente e para guardar os dados de todos os materiais de seu gosto em uma biblioteca digital, será feito com integração no banco de dados, trazendo organização, agilidade, tirando as redundâncias, para que não tenha a entrada de conteúdo repetido, tornando também seguro todos os seus dados, com o sistema de usuários cada pessoa terá acesso apenas aos seus conteúdos adicionados. Com possibilidade de excluir o conteúdo e de consultar pelo nome os arquivos adicionados. 
