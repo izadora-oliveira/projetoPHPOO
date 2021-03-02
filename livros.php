@@ -3,6 +3,7 @@
 class Livros
 {
     //atributos
+  public $livros = 0;
   public $nome;
   public $autor;
   public $lancamento;
@@ -45,29 +46,18 @@ class Livros
   }
 
   //método
+  function addlivro($nome, $lancamento, $autor)
+  {
+    $this->nome[$this->livros] = $nome;
+    $this->lancamento[$this->livros] = $lancamento;
+    $this->autor[$this->livros] = $autor;
+    $this->livros++;
+    return ($this->livros);
+  }
   function consultalivro()
   {
     
     return ;
-  }
-  function adicionarlivro()
-  {
-    
-    return ;
-  }
-
-  function excluirlivro()
-  {
-    
-    return ;
-  }
-  function repetido($nome, $autor)
-  {
-    if ($this->nome == $nome and $this->autor == $autor){
-      return " esse livro ja foi adcionado";
-    }
-    
-    return "adcionado com sucesso";
   }
   
 }
