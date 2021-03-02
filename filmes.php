@@ -2,6 +2,7 @@
 class Filmes
 {
   //atributos
+  public $filmes = 0;
   public $nome;
   public $lancamento;
   public $genero;
@@ -44,27 +45,17 @@ class Filmes
   }
 
   //método
+  function addfilme($nome, $lancamento, $genero)
+  {
+    $this->nome[$this->filmes] = $nome;
+    $this->lancamento[$this->filmes] = $lancamento;
+    $this->genero[$this->filmes] = $genero;
+    $this->filmes++;
+    return ($this->filmes);
+  }
   function consultafilme()
   {
     
     return ;
-  }
-  function adicionarfilme()
-  {
-    
-    return ;
-  }
-  function excluirfilme()
-  {
-    
-    return ;
-  }
-  function repetido($nome, $lancamento)
-  {
-    if ($this->nome == $nome and $this->lancamento == $lancamento){
-      return " esse filme ja foi adcionado";
-    }
-    
-    return "adcionado com sucesso";
   }
 }
