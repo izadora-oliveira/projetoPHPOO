@@ -43,5 +43,31 @@ class Livros
   {
     return $this->lancamento;
   }
+
+  //método
+  function consultalivro()
+  {
+    
+    return ;
+  }
+  function adicionarlivro()
+  {
+    
+    return ;
+  }
+
+  function excluirlivro()
+  {
+    
+    return ;
+  }
+  function repetido($nome, $autor)
+  {
+    if ($this->nome == $nome and $this->autor == $autor){
+      return " esse livro ja foi adcionado";
+    }
+    
+    return "adcionado com sucesso";
+  }
   
 }
