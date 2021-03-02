@@ -3,6 +3,7 @@
 class Musica
 {
     //atributos
+  public $musicas = 0;
   public $nome;
   public $cantor;
   public $album;
@@ -45,28 +46,17 @@ class Musica
   }
 
   //método
+  function addmusica($nome, $cantor, $album)
+  {
+    $this->nome[$this->musicas] = $nome;
+    $this->cantor[$this->musicas] = $cantor;
+    $this->album[$this->musicas] = $album;
+    $this->musicas++;
+    return ($this->musicas);
+  }
   function consultamusica()
   {
     
     return ;
-  }
-  function adicionarmusica()
-  {
-    
-    return ;
-  }
-
-  function excluirmusica()
-  {
-    
-    return ;
-  }
-  function repetido($nome, $cantor)
-  {
-    if ($this->nome == $nome and $this->cantor == $cantor){
-      return " essa musica ja foi adcionada";
-    }
-    
-    return "adcionado com sucesso";
   }
 }
