@@ -6,14 +6,16 @@ class Series
   public $nome;
   public $temporadas;
   public $lancamento;
+  public $local;
 
   //construtor da classe
-  function __construct($nome_c, $temporada_c, $lancamento_c)
+  function __construct($nome_c, $temporada_c, $lancamento_c, $local_c)
   {
 
     $this->nome = $nome_c;
     $this->temporada = $temporada_c;
     $this->lancamento = $lancamento_c;
+    $this->local = $local_c;
   }
 
   // setters
@@ -29,6 +31,10 @@ class Series
   {
     $this->lancamento = $lancamento;
   }
+  public function setLocal($local)
+  {
+    $this->local = $local;
+  }
 
   //getters
   function getNome()
@@ -43,20 +49,24 @@ class Series
   {
     return $this->lancamento;
   }
+  function getLocal()
+  {
+    return $this->local;
+  }
 
   //método
-  function addserie($nome, $temporadas, $lancamento)
+  function adicionar()
   {
-    $this->nome[$this->serie] = $nome;
-    $this->temporadas[$this->serie] = $temporadas;
-    $this->lancamento[$this->serie] = $lancamento;
-    $this->serie++;
-    return ($this->serie);
+    return;
   }
-  function consultaserie()
+  function consultar()
   {
     
     return ;
   }
-
+  function vetodos()
+  {
+    
+    return ;
+  }
 }
