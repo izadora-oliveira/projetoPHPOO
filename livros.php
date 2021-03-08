@@ -7,14 +7,16 @@ class Livros
   public $nome;
   public $autor;
   public $lancamento;
+  public $meta;
 
   //construtor da classe
-  function __construct($nome_c, $autor_c, $lancamento_c)
+  function __construct($nome_c, $autor_c, $lancamento_c, $meta_c)
   {
 
     $this->nome = $nome_c;
     $this->autor = $autor_c;
     $this->lancamento = $lancamento_c;
+    $this->meta = $meta_c;
   }
 
   // setters
@@ -30,6 +32,10 @@ class Livros
   {
     $this->lancamento = $lancamento;
   }
+  public function setMeta($meta)
+  {
+    $this->meta = $meta;
+  }
 
   //getters
   function getNome()
@@ -44,17 +50,23 @@ class Livros
   {
     return $this->lancamento;
   }
+  function getMeta()
+  {
+    return $this->meta;
+  }
 
   //método
-  function addlivro($nome, $lancamento, $autor)
+  function adicionar()
   {
-    $this->nome[$this->livros] = $nome;
-    $this->lancamento[$this->livros] = $lancamento;
-    $this->autor[$this->livros] = $autor;
-    $this->livros++;
-    return ($this->livros);
+  
+    return ;
   }
-  function consultalivro()
+  function consultar()
+  {
+    
+    return ;
+  }
+  function vetodos()
   {
     
     return ;
