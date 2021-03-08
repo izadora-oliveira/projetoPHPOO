@@ -46,15 +46,17 @@ class Musica
   }
 
   //método
-  function addmusica($nome, $cantor, $album)
+  function adicionar()
   {
-    $this->nome[$this->musicas] = $nome;
-    $this->cantor[$this->musicas] = $cantor;
-    $this->album[$this->musicas] = $album;
-    $this->musicas++;
-    return ($this->musicas);
+    
+    return ;
   }
-  function consultamusica()
+  function consultar()
+  {
+    
+    return ;
+  }
+  function vertodos()
   {
     
     return ;
