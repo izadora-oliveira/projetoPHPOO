@@ -6,14 +6,16 @@ class Filmes
   public $nome;
   public $lancamento;
   public $genero;
+  public $local;
 
   //construtor da classe
-  function __construct($nome_c, $lancamento_c, $genero_c)
+  function __construct($nome_c, $lancamento_c, $genero_c, $local_c)
   {
 
     $this->nome = $nome_c;
     $this->lancamento = $lancamento_c;
     $this->genero = $genero_c;
+    $this->local = $local_c;
   }
 
   // setters
@@ -29,6 +31,10 @@ class Filmes
   {
     $this->genero = $genero;
   }
+  public function setLocal($local)
+  {
+    $this->local = $local;
+  }
 
   //getters
   function getNome()
@@ -43,17 +49,23 @@ class Filmes
   {
     return $this->genero;
   }
+  function getLocal()
+  {
+    return $this->local;
+  }
 
   //método
-  function addfilme($nome, $lancamento, $genero)
+  function adicionar()
   {
-    $this->nome[$this->filmes] = $nome;
-    $this->lancamento[$this->filmes] = $lancamento;
-    $this->genero[$this->filmes] = $genero;
-    $this->filmes++;
-    return ($this->filmes);
+    
+    return ;
   }
-  function consultafilme()
+  function consultar()
+  {
+    
+    return ;
+  }
+  function vertodos()
   {
     
     return ;
