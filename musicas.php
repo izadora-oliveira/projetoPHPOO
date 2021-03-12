@@ -1,6 +1,7 @@
 <?php
+require "estante.php";
 
-class Musica
+class Musica extends Estante
 {
     //atributos
   public $musicas = 0;
@@ -9,56 +10,37 @@ class Musica
   public $album;
 
   //construtor da classe
-  function __construct($nome_c, $cantor_c, $album_c)
+  function __construct($tipo, $nome_c, $cantor_c, $album_c)
   {
-
+    $this->tipo = $tipo;
     $this->nome = $nome_c;
     $this->cantor = $cantor_c;
     $this->album = $album_c;
   }
 
-  // setters
-  public function setNome($nome)
-  {
-    $this->nome = $nome;
-  }
-  public function setCantor($cantor)
-  {
-    $this->cantor = $cantor;
-  }
-  public function setAlbum($album)
-  {
-    $this->album = $album;
-  }
+  // setters e getters
+  public function __get($atributo)
+	{
+		return $this->$atributo;
+	}
 
-  //getters
-  function getNome()
-  {
-    return $this->nome;
-  }
-  function getCantor()
-  {
-    return $this->cantor;
-  }
-  function getAlbum()
-  {
-    return $this->album;
-  }
+	public function __set($atributo, $valor)
+	{
+		$this->$atributo = $valor;
+	}
 
   //método
   function adicionar()
   {
     
-    return ;
   }
-  function consultar()
+  function excluir()
   {
     
-    return ;
   }
-  function vertodos()
+  function editar()
   {
     
-    return ;
   }
+  
 }
