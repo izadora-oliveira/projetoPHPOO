@@ -1,75 +1,61 @@
 <?php
+require "estante.php";
 
-class Livros
+class Livros extends Estante
 {
     //atributos
-  public $livros = 0;
   public $nome;
   public $autor;
   public $lancamento;
   public $meta;
+  public $lidos = 0;
 
   //construtor da classe
-  function __construct($nome_c, $autor_c, $lancamento_c, $meta_c)
+  function __construct($tipo, $nome_c, $autor_c, $lancamento_c, $meta_c)
   {
-
+    $this->tipo = $tipo;
     $this->nome = $nome_c;
     $this->autor = $autor_c;
     $this->lancamento = $lancamento_c;
     $this->meta = $meta_c;
+    $this->lidos += 1;
   }
 
-  // setters
-  public function setNome($nome)
-  {
-    $this->nome = $nome;
-  }
-  public function setAutor($autor)
-  {
-    $this->autor = $autor;
-  }
-  public function setLancamento($lancamento)
-  {
-    $this->lancamento = $lancamento;
-  }
-  public function setMeta($meta)
-  {
-    $this->meta = $meta;
-  }
+  // setters e getters
+  public function __get($atributo)
+	{
+		return $this->$atributo;
+	}
 
-  //getters
-  function getNome()
-  {
-    return $this->nome;
-  }
-  function getAutor()
-  {
-    return $this->autor;
-  }
-  function getLancamento()
-  {
-    return $this->lancamento;
-  }
-  function getMeta()
-  {
-    return $this->meta;
-  }
+	public function __set($atributo, $valor)
+	{
+		$this->$atributo = $valor;
+	}
 
   //método
+  function meta($meta)
+  {
+    if ($this->lidos = $this->meta) {
+      echo "livros lidos este mes: ",$this->lidos;
+      echo "meta estipulada: ",$this->meta;
+      echo "você bateu sua meta mensal, parabéns!";
+    } else {
+      echo "livros lidos este mes: ",$this->lidos;
+      echo "meta estipulada: ",$this->meta;
+      echo "ainda falta, continue lendo!";
+    }
+  }
   function adicionar()
   {
-  
-    return ;
+    
   }
-  function consultar()
+  function excluir()
   {
     
-    return ;
   }
-  function vetodos()
+  function editar()
   {
     
-    return ;
   }
   
 }
