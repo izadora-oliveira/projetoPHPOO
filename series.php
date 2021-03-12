@@ -1,72 +1,44 @@
 <?php
+require "estante.php";
 
-class Series
+class Series extends Estante
 {
     //atributos
   public $nome;
   public $temporadas;
   public $lancamento;
-  public $local;
 
   //construtor da classe
-  function __construct($nome_c, $temporada_c, $lancamento_c, $local_c)
+  function __construct($tipo, $nome_c, $temporada_c, $lancamento_c)
   {
-
+    $this->tipo = $tipo;
     $this->nome = $nome_c;
     $this->temporada = $temporada_c;
     $this->lancamento = $lancamento_c;
-    $this->local = $local_c;
   }
 
-  // setters
-  public function setNome($nome)
-  {
-    $this->nome = $nome;
-  }
-  public function setTemporada($temporada)
-  {
-    $this->temporada = $temporada;
-  }
-  public function setLancamento($lancamento)
-  {
-    $this->lancamento = $lancamento;
-  }
-  public function setLocal($local)
-  {
-    $this->local = $local;
-  }
+  // setters e getters
+  public function __get($atributo)
+	{
+		return $this->$atributo;
+	}
 
-  //getters
-  function getNome()
-  {
-    return $this->nome;
-  }
-  function getTemporada()
-  {
-    return $this->temporada;
-  }
-  function getLancamento()
-  {
-    return $this->lancamento;
-  }
-  function getLocal()
-  {
-    return $this->local;
-  }
+	public function __set($atributo, $valor)
+	{
+		$this->$atributo = $valor;
+	}
 
   //método
   function adicionar()
   {
-    return;
+    
   }
-  function consultar()
+  function excluir()
   {
     
-    return ;
   }
-  function vetodos()
+  function editar()
   {
     
-    return ;
   }
 }
