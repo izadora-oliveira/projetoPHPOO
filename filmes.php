@@ -1,73 +1,47 @@
 <?php
-class Filmes
+require "estante.php";
+
+class Filmes extends Estante
 {
   //atributos
-  public $filmes = 0;
   public $nome;
   public $lancamento;
   public $genero;
   public $local;
 
   //construtor da classe
-  function __construct($nome_c, $lancamento_c, $genero_c, $local_c)
+  function __construct($tipo,$nome_c, $lancamento_c, $genero_c, $local_c)
   {
-
+    $this->tipo = $tipo;
     $this->nome = $nome_c;
     $this->lancamento = $lancamento_c;
     $this->genero = $genero_c;
     $this->local = $local_c;
   }
 
-  // setters
-  public function setNome($nome)
-  {
-    $this->nome = $nome;
-  }
-  public function setLancamento($lancamento)
-  {
-    $this->lancamento = $lancamento;
-  }
-  public function setGenero($genero)
-  {
-    $this->genero = $genero;
-  }
-  public function setLocal($local)
-  {
-    $this->local = $local;
-  }
+  // setters e getters
+  public function __get($atributo)
+	{
+		return $this->$atributo;
+	}
 
-  //getters
-  function getNome()
-  {
-    return $this->nome;
-  }
-  function getLancamento()
-  {
-    return $this->lancamento;
-  }
-  function getGenero()
-  {
-    return $this->genero;
-  }
-  function getLocal()
-  {
-    return $this->local;
-  }
+	public function __set($atributo, $valor)
+	{
+		$this->$atributo = $valor;
+	}
 
   //método
   function adicionar()
   {
-    
-    return ;
+    return "adcionar";
   }
-  function consultar()
+  function excluir()
   {
-    
-    return ;
+    return "adcionar";
   }
-  function vertodos()
+  function editar()
   {
-    
-    return ;
+    return "adcionar";
   }
+
 }
