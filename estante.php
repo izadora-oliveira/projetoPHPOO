@@ -5,6 +5,10 @@ abstract class Estante
     public $tipo;
     
     //métodos
+    abstract public function adicionar();
+    abstract public function excluir();
+    abstract public function editar();
+    
     public function vertodos()
     {
         return ;
@@ -12,10 +16,7 @@ abstract class Estante
     public function ordenar(){
         return;
     }
-    abstract public function adicionar();
     public function consultar(){
         return;
     }
-    abstract public function excluir();
-    abstract public function editar();
 }
