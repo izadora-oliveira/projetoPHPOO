@@ -16,23 +16,24 @@
     </div>
   </div>
 </nav>
+
 <div class="container">
     <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">cadastrar</h5>
         <p class="card-text">
-        <form action="cadastro.php" method="POST">
+        <form action="usuario.php" method="POST">
         <div class="mb-3">
         <label for="exampleInputNome" class="form-label">Nome</label>
-        <input type="name" class="form-control" id="exampleInputNome">  
+        <input type="name" class="form-control" id="nome">  
         </div>
         <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1">  
+        <input type="email" class="form-control" id="email">  
         </div>
         <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input type="password" class="form-control" id="senha">
         </div>
         <button type="submit" class="btn btn-primary">cadastrar</button>
         <a href="entra.php" class="card-link">entrar</a>
