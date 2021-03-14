@@ -7,8 +7,6 @@ class Livros extends Estante
   public $nome;
   public $autor;
   public $lancamento;
-  public $meta;
-  public $lidos = 0;
 
   //construtor da classe
   function __construct($tipo, $nome_c, $autor_c, $lancamento_c, $meta_c)
@@ -33,18 +31,6 @@ class Livros extends Estante
 	}
 
   //método
-  function meta($meta)
-  {
-    if ($this->lidos = $this->meta) {
-      echo "livros lidos este mes: ",$this->lidos;
-      echo "meta estipulada: ",$this->meta;
-      echo "você bateu sua meta mensal, parabéns!";
-    } else {
-      echo "livros lidos este mes: ",$this->lidos;
-      echo "meta estipulada: ",$this->meta;
-      echo "ainda falta, continue lendo!";
-    }
-  }
   function adicionar()
   {
     
