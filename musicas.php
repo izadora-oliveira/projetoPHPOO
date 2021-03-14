@@ -1,10 +1,9 @@
 <?php
 require "estante.php";
 
-class Musica extends Estante
+class Musicas
 {
     //atributos
-  public $musicas = 0;
   public $nome;
   public $cantor;
   public $album;
