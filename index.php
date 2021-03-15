@@ -8,69 +8,27 @@
     <title>Estante</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" >Estante Digital</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">filmes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Séries</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Livros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Músicas</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
+<div class="card w-75">
+  <div class="card-body">
+    <h5 class="card-title">Estante Digital</h5>
 <table class="table">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <th scope="row">Filmes</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><a href="filmes.php" >Filmes</a></th>
     </tr>
     <tr>
-      <th scope="row">Séries</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <th scope="row"><a href="series.php" >Séries</a></th>
     </tr>
     <tr>
-      <th scope="row">Livros</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <th scope="row"><a href="livros.php" >Livros</a></th>
     </tr>
     <tr>
-      <th scope="row">Músicas</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <th scope="row"><a href="musicas.php" >Músicas</a></th>
     </tr>
   </tbody>
 </table>
-    
+  </div>
+</div>
+
 </body>
 </html>
