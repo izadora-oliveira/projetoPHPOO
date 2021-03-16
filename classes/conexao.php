@@ -12,7 +12,7 @@ class Conexao
 	public function conectar()
 	{
 
-		$conexao = new Pdointerface(
+		$conexao = new Pdo(
 			"mysql:host=$this->host;dbname=$this->dbname",
 			"$this->user",
 			"$this->pass"
