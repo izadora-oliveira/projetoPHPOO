@@ -16,30 +16,24 @@
     </div>
   </div>
 </nav>
-<?php if (isset($_GET['inclusao']) && $_GET['inclusao'] == 1) {
-	?>
-		<div class="bg-success pt-2 text-white d-flex justify-content-center">
-			<h5>Cadastro feito com sucesso!</h5>
-		</div>
-	<?php } ?>
 
 <div class="container">
     <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">cadastrar</h5>
         <p class="card-text">
-        <form action="cadastrocontroller.php" method="POST">
+        <form action="classes\cadastrocontroller.php" method="POST">
         <div class="mb-3">
         <label for="exampleInputNome" class="form-label">Nome</label>
-        <input type="name" class="form-control" id="nome">  
+        <input name = "nome" type="name" class="form-control" id="nome">  
         </div>
         <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email">  
+        <input name="email" type="email" class="form-control" id="email">  
         </div>
         <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="senha">
+        <input name="senha" type="password" class="form-control" id="senha">
         </div>
         <button type="submit" class="btn btn-primary">cadastrar</button>
         <a href="entra.php" class="card-link">entrar</a>
