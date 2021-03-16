@@ -16,13 +16,19 @@
     </div>
   </div>
 </nav>
+<?php if (isset($_GET['inclusao']) && $_GET['inclusao'] == 1) {
+	?>
+		<div class="bg-success pt-2 text-white d-flex justify-content-center">
+			<h5>Cadastro feito com sucesso!</h5>
+		</div>
+	<?php } ?>
 
 <div class="container">
     <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">cadastrar</h5>
         <p class="card-text">
-        <form action="usuario.php" method="POST">
+        <form action="cadastrocontroller.php" method="POST">
         <div class="mb-3">
         <label for="exampleInputNome" class="form-label">Nome</label>
         <input type="name" class="form-control" id="nome">  
