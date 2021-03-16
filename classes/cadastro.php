@@ -1,6 +1,6 @@
 <?php
 
-class Cadastro implements Pdo
+class Cadastro
 {
   //atributos
   public $nome;
@@ -13,11 +13,5 @@ class Cadastro implements Pdo
 
 	public function __set($atributo, $valor) {
 		$this->$atributo = $valor;
-	}
-
-  //métodos
-  public function inserir()
-	{ 
-
 	}
 }
