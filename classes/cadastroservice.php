@@ -1,8 +1,5 @@
 <?php
 
-
-//usada para instância de um objeto que vai intermediar
-//a gravação de uma tarefa no banco de dados (CRUD)
 class CadastroService
 {
 	public $conexao;
@@ -22,9 +19,9 @@ class CadastroService
 
 		$query = 'INSERT INTO usuario(nome, email, senha)VALUES(:nome, :email, :senha)';
 		$stmt = $this->conexao->prepare($query);
-		$stmt->bindValue(':nome', $this->tarefa->__get('nome'));
-        $stmt->bindValue(':email', $this->tarefa->__get('email'));
-        $stmt->bindValue(':senha', $this->tarefa->__get('senha'));
+		$stmt->bindValue(':nome', $this->nome);
+        $stmt->bindValue(':email', $this->email);
+        $stmt->bindValue(':senha', $this->senha);
 		$stmt->execute();
 	}
 
