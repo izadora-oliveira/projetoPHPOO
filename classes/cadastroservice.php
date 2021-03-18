@@ -20,21 +20,4 @@ class CadastroService
         $stmt->bindValue(':senha', $this->cadastro->__get('senha'));
 		$stmt->execute();
 	}
-
-	public function recuperar()
-	{ //read
-		//teste
-		//teste434
-
-	}
-
-	public function atualizar()
-	{ //update
-
-	}
-
-	public function remover()
-	{ //delete
-
-	}
 }
