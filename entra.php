@@ -21,14 +21,14 @@
   <div class="card-body">
     <h5 class="card-title">Entrar</h5>
     <p class="card-text">
-    <form action="logim.php" method="POST">
+    <form action="classes/logincontroller.php" method="POST">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1">  
+        <input name = "email" type="email" class="form-control" id="exampleInputEmail1">  
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input name = "senha" type="password" class="form-control" id="exampleInputPassword1">
     </div>
     <button type="submit" class="btn btn-primary">Entrar</button>
     <a href="cadastrar.php" class="card-link">cadastrar</a>

@@ -1,5 +1,5 @@
 <?php
-class Logim
+class Login
 {
   //atributos
   public $email;
