@@ -7,14 +7,15 @@ class Musicas
   public $nome;
   public $cantor;
   public $album;
+  public $lancamento;
 
   //construtor da classe
-  function __construct($tipo, $nome_c, $cantor_c, $album_c)
+  function __construct($nome_c, $cantor_c, $album_c, $lancamento)
   {
-    $this->tipo = $tipo;
     $this->nome = $nome_c;
     $this->cantor = $cantor_c;
     $this->album = $album_c;
+    $this->lancamento = $lancamento;
   }
 
   // setters e getters
@@ -29,17 +30,5 @@ class Musicas
 	}
 
   //método
-  function adicionar()
-  {
-    
-  }
-  function excluir()
-  {
-    
-  }
-  function editar()
-  {
-    
-  }
   
 }

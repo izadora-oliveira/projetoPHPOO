@@ -4,18 +4,14 @@ require "cadastro.php";
 require "cadastroservice.php";
 require "conexao.php";
 
-$n = $_POST['nome'];
-$e = $_POST['email'];
-$s = $_POST['senha'];
-
 $cadastro = new Cadastro();
-$cadastro->__set('nome', $n);
-$cadastro->__set('email', $e);
-$cadastro->__set('senha', $s);
+$cadastro->__set('nome', $_POST['nome']);
+$cadastro->__set('email', $_POST['email']);
+$cadastro->__set('senha', $_POST['senha']);
 
 $conexao = new Conexao();
 
-$cadastroService = new CadastroService($conexao, $n, $e, $s);
+$cadastroService = new CadastroService($conexao, $cadastro);
 $cadastroService->inserir();
 
 header('Location:../cadastrar.php?inclusao=1');

@@ -3,25 +3,21 @@
 class CadastroService
 {
 	public $conexao;
-	public $nome;
-    public $email;
-    public $senha;
+	public $cadastro;
 
-	public function __construct($conexao, $nome, $email, $senha)
+	public function __construct($conexao, $cadastro)
 	{
 		$this->conexao = $conexao->conectar();
-		$this->nome = $nome;
-        $this->email = $email;
-        $this->senha = $senha;
+		$this->cadastro = $cadastro;
 	}
 	public function inserir()
 	{ //create
 
 		$query = 'INSERT INTO usuario(nome, email, senha)VALUES(:nome, :email, :senha)';
 		$stmt = $this->conexao->prepare($query);
-		$stmt->bindValue(':nome', $this->nome);
-        $stmt->bindValue(':email', $this->email);
-        $stmt->bindValue(':senha', $this->senha);
+		$stmt->bindValue(':nome', $this->cadastro->__get('nome'));
+        $stmt->bindValue(':email', $this->cadastro->__get('email'));
+        $stmt->bindValue(':senha', $this->cadastro->__get('senha'));
 		$stmt->execute();
 	}
 
