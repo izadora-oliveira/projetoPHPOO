@@ -1,3 +1,7 @@
+<?php
+require_once("classes/verificalogin.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +28,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Excluir</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="classes/logout.php">Sair</a>
         </li>
       </ul>
       <form class="d-flex">

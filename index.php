@@ -1,3 +1,7 @@
+<?php
+require_once("classes/verificalogin.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +29,9 @@
     <tr>
       <th scope="row"><a href="musicas.php" >Músicas</a></th>
     </tr>
+    <tr>
+      <th scope="row"><a href="classes/logout.php" >Sair</a></th>
+    </tr> 
   </tbody>
 </table>
   </div>
