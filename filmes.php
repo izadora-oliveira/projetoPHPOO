@@ -41,10 +41,34 @@ require_once("classes/verificalogin.php");
   </div>
 </nav>
 
+<form action="classes\adiciona.php" method="POST">
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+    <th scope="col">Imagem</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Lançamento</th>
+      <th scope="col">Genero</th>
+      <th scope="col">local</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><input name = "imagem" type="file" class="form-control" id="inputGroupFile01"></th>
+      <td><input name = "nome" type="email" class="form-control" id="exampleInputEmail1"></td>
+      <td><input name = "lancamento" type="email" class="form-control" id="exampleInputEmail1"></td>
+      <td><input name = "genero" type="email" class="form-control" id="exampleInputEmail1"></td>
+      <td><input name = "local" type="email" class="form-control" id="exampleInputEmail1"></td>
+      <td><button class="btn btn-primary" type="submit">Adicionar</button></td>
+    </tr>
+  </tbody>
+</table>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Imagem</th>
       <th scope="col">Nome</th>
       <th scope="col">Lançamento</th>
       <th scope="col">Genero</th>
