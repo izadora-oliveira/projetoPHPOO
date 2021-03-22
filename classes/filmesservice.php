@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class FilmesService
 {
@@ -15,7 +16,7 @@ function adicionar()
   {
         $query = 'INSERT INTO filmes(idestrangeira, imagem, nome, lancamento, genero, lugar)VALUES(:idusuario, :imagem, :nome, :lancamento, :genero, :lugar)';
 		$stmt = $this->conexao->prepare($query);
-		$stmt->bindValue(':idestrangeira', $this->filmes->__get('idestrangeira'));
+		$stmt->bindValue(':idestrangeira', $_SESSION('idusuario'));
 		$stmt->bindValue(':imagem', $this->filmes->__get('imagem'));
 		$stmt->bindValue(':nome', $this->filmes->__get('nome'));
         $stmt->bindValue(':lancamento', $this->filmes->__get('lancamento'));

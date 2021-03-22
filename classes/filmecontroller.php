@@ -1,12 +1,10 @@
 <?php
-session_start();
 
 require "conexao.php";
 require "filmes.php";
 require "filmesservice.php";
 
 $filmes = new Filmes();
-$filmes->__set('idusuario', $_SESSION['idusuario']);
 $filmes->__set('imagem', $_POST['imagem']);
 $filmes->__set('nome', $_POST['nome']);
 $filmes->__set('lancamento', $_POST['lancamento']);
