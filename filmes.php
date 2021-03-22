@@ -21,9 +21,6 @@ require_once("classes/verificalogin.php");
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inserir</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Editar</a>
         </li>
         <li class="nav-item">
@@ -41,7 +38,7 @@ require_once("classes/verificalogin.php");
   </div>
 </nav>
 
-<form action="classes\adiciona.php" method="POST">
+<form action="classes\filmecontroller.php" method="POST">
 <table class="table">
   <thead>
     <tr>
@@ -49,21 +46,22 @@ require_once("classes/verificalogin.php");
       <th scope="col">Nome</th>
       <th scope="col">Lançamento</th>
       <th scope="col">Genero</th>
-      <th scope="col">local</th>
+      <th scope="col">Lugar</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><input name = "imagem" type="file" class="form-control" id="inputGroupFile01"></th>
-      <td><input name = "nome" type="email" class="form-control" id="exampleInputEmail1"></td>
-      <td><input name = "lancamento" type="email" class="form-control" id="exampleInputEmail1"></td>
-      <td><input name = "genero" type="email" class="form-control" id="exampleInputEmail1"></td>
-      <td><input name = "local" type="email" class="form-control" id="exampleInputEmail1"></td>
+      <th scope="row"><input name = "imagem" type="file" class="form-control" id="imagem"></th>
+      <td><input name = "nome" type="text" class="form-text" id="nome"></td>
+      <td><input name = "lancamento" type="number" class="form-text" id="lancamento"></td>
+      <td><input name = "genero" type="text" class="form-text" id="genero"></td>
+      <td><input name = "lugar" type="text" class="form-text" id="lugar"></td>
       <td><button class="btn btn-primary" type="submit">Adicionar</button></td>
     </tr>
   </tbody>
 </table>
 </form>
+
 
 <table class="table">
   <thead>
@@ -72,7 +70,7 @@ require_once("classes/verificalogin.php");
       <th scope="col">Nome</th>
       <th scope="col">Lançamento</th>
       <th scope="col">Genero</th>
-      <th scope="col">local</th>
+      <th scope="col">Lugar</th>
     </tr>
   </thead>
   <tbody>

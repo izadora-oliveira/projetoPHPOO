@@ -38,10 +38,34 @@ require_once("classes/verificalogin.php");
   </div>
 </nav>
 
+<form action="classes\livroscontroller.php" method="POST">
+<table class="table"> 
+  <thead>
+    <tr>
+    <th scope="col">Imagem</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Lançamento</th>
+      <th scope="col">Nota</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><input name = "imagem" type="file" class="form-control" id="imagem"></th>
+      <td><input name = "nome" type="text" class="form-text" id="nome"></td>
+      <td><input name = "autor" type="text" class="form-text" id="autor"></td>
+      <td><input name = "lancamento" type="number" class="form-text" id="lancamento"></td>
+      <td><input name = "nota" type="number" class="form-text" id="nota"></td>
+      <td><button class="btn btn-primary" type="submit">Adicionar</button></td>
+    </tr>
+  </tbody>
+</table>
+</form>
+
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Imagem</th>
       <th scope="col">Nome</th>
       <th scope="col">Autor</th>
       <th scope="col">Lançamento</th>
