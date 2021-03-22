@@ -3,6 +3,7 @@
 class Filmes
 {
   //atributos
+  public $idusuario;
   public $imagem;
   public $nome;
   public $lancamento;
