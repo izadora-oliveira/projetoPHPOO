@@ -6,6 +6,7 @@ class Login
   //atributos
   public $email;
   public $senha;
+  public $idusuario;
 
   public function __get($atributo) {
     return $this->$atributo;
@@ -26,7 +27,8 @@ class Login
   }
 
   function getIdUsuario(){
-    return $_SESSION['idusuario'];
+    $this->idusuario = $_SESSION['idusuario'];
+    return $this->idusuario;
 
   }
 
