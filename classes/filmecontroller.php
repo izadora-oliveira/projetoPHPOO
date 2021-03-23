@@ -1,6 +1,7 @@
 <?php
 
 require "conexao.php";
+require "login.php";
 require "filmes.php";
 require "filmesservice.php";
 
@@ -11,11 +12,14 @@ $filmes->__set('lancamento', $_POST['lancamento']);
 $filmes->__set('genero', $_POST['genero']);
 $filmes->__set('lugar', $_POST['lugar']);
 
+$idusuario = new login();
+$idusuario->getIdUsuario();
+
 
 $conexao = new Conexao();
 
 
-$filmesService = new FilmesService($conexao, $filmes);
+$filmesService = new FilmesService($conexao, $filmes, $idusuario);
 $filmesService->adicionar();
 
 

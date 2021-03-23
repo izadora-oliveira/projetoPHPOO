@@ -1,26 +1,27 @@
 <?php
-session_start();
 
 class FilmesService
 {
 	public $conexao;
-	public $cadastro;
+	public $filmes;
+  public $idusuario;
 
-	public function __construct($conexao, $filmes)
+	public function __construct($conexao, $filmes, $idusuario)
 	{
 		$this->conexao = $conexao->conectar();
 		$this->filmes = $filmes;
+    $this->idusuario = $idusuario;
 	}
 
 function adicionar()
   {
-        $query = 'INSERT INTO filmes(idestrangeira, imagem, nome, lancamento, genero, lugar)VALUES(:idusuario, :imagem, :nome, :lancamento, :genero, :lugar)';
+    $query = 'INSERT INTO filmes(idestrangeira, imagem, nome, lancamento, genero, lugar)VALUES(:idusuario, :imagem, :nome, :lancamento, :genero, :lugar)';
 		$stmt = $this->conexao->prepare($query);
-		$stmt->bindValue(':idestrangeira', $_SESSION('idusuario'));
+		$stmt->bindValue(':idestrangeira', $this->idusuario);
 		$stmt->bindValue(':imagem', $this->filmes->__get('imagem'));
 		$stmt->bindValue(':nome', $this->filmes->__get('nome'));
-        $stmt->bindValue(':lancamento', $this->filmes->__get('lancamento'));
-        $stmt->bindValue(':genero', $this->filmes->__get('genero'));
+    $stmt->bindValue(':lancamento', $this->filmes->__get('lancamento'));
+    $stmt->bindValue(':genero', $this->filmes->__get('genero'));
 		$stmt->bindValue(':lugar', $this->filmes->__get('lugar'));
 		$stmt->execute();
   }

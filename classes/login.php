@@ -25,6 +25,11 @@ class Login
     }
   }
 
+  function getIdUsuario(){
+    return $_SESSION['idusuario'];
+
+  }
+
   function deslogar(){
     session_destroy();
     header('Location:../entra.php?inclusao=1');
