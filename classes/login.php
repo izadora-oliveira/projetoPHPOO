@@ -6,7 +6,6 @@ class Login
   //atributos
   public $email;
   public $senha;
-  public $idusuario;
 
   public function __get($atributo) {
     return $this->$atributo;
@@ -24,12 +23,6 @@ class Login
       window.location.href='entra.php?login=erro2';
       </script>");
     }
-  }
-
-  function getIdUsuario(){
-    $this->idusuario = $_SESSION['idusuario'];
-    return $this->idusuario;
-
   }
 
   function deslogar(){

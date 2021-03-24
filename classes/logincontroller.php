@@ -12,11 +12,13 @@ $conexao = new Conexao();
 
 $loginService = new LoginService($conexao, $login);
 $result = $loginService->logar($login->__get('email'),$login->__get('senha'));
+
 if (empty($result)) {
     echo 'logim e ou senha incorretos';
 } else {
-        $_SESSION['idusuario'] = $result['idusuario'];
-        $_SESSION['nome'] = $result['nome'];
+        $_SESSION['idusuario'] = $result[0]->idusuario;
+        $_SESSION['nome'] = $result[0]->nome;
         $_SESSION['authenticated'] = 'YES';
-    header('Location:../index.php?inclusao=1');
+
+        header('Location:../index.php?inclusao=1');
 }
