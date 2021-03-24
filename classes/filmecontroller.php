@@ -20,8 +20,3 @@ $filmesService->adicionar();
 
 header('Location:../filmes.php?inclusao=1');
 
-$filmes = new Filmes();
-$conexao = new Conexao();
-  
-$filmesService = new FilmesService($conexao, $filmes);
-$todos = $filmesService->recuperar();

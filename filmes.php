@@ -61,13 +61,7 @@ require_once("classes/verificalogin.php");
     </tr>
   </tbody>
 </table>
-</form>
-
-<?php
-
-
-
-?>
+</form>  
     
 </body>
 </html>

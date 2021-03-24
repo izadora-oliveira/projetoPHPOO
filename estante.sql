@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Mar-2021 às 19:58
+-- Tempo de geração: 24-Mar-2021 às 02:42
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -36,33 +36,14 @@ CREATE TABLE `filmes` (
   `lugar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Estrutura da tabela `livros`
+-- Extraindo dados da tabela `filmes`
 --
 
-CREATE TABLE `livros` (
-  `idlivro` int(10) NOT NULL,
-  `imagem` mediumblob NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `autor` varchar(100) NOT NULL,
-  `lancamento` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `series`
---
-
-CREATE TABLE `series` (
-  `idserie` int(10) NOT NULL,
-  `imagem` mediumblob NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `temporada` int(10) NOT NULL,
-  `lancamento` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `filmes` (`idestrangeira`, `imagem`, `nome`, `lancamento`, `genero`, `lugar`) VALUES
+(1, 0x6f706f636f2e6a7067, 'o poço', 2019, 'ficção científica', 'netflix'),
+(1, 0x766964726f2e6a7067, 'vidro', 2019, 'drama', 'internet'),
+(1, 0x667261676d656e7461646f2e6a7067, 'fragmentado', 2016, 'terror', 'internet');
 
 -- --------------------------------------------------------
 
@@ -98,18 +79,6 @@ ALTER TABLE `filmes`
   ADD KEY `idestrangeira` (`idestrangeira`);
 
 --
--- Índices para tabela `livros`
---
-ALTER TABLE `livros`
-  ADD KEY `idlivro` (`idlivro`);
-
---
--- Índices para tabela `series`
---
-ALTER TABLE `series`
-  ADD KEY `idserie` (`idserie`);
-
---
 -- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
@@ -134,18 +103,6 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `filmes`
   ADD CONSTRAINT `idestrangeira` FOREIGN KEY (`idestrangeira`) REFERENCES `usuario` (`idusuario`);
-
---
--- Limitadores para a tabela `livros`
---
-ALTER TABLE `livros`
-  ADD CONSTRAINT `idlivro` FOREIGN KEY (`idlivro`) REFERENCES `usuario` (`idusuario`);
-
---
--- Limitadores para a tabela `series`
---
-ALTER TABLE `series`
-  ADD CONSTRAINT `idserie` FOREIGN KEY (`idserie`) REFERENCES `usuario` (`idusuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
